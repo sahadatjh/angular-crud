@@ -4,18 +4,36 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UserRoutingModule } from './user-routing.module';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
-
-
+import { UserFormDialogComponent } from './user-form-dialog/user-form-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
+  providers: [
+    FormControl
+  ],
   declarations: [
-    UsersListComponent
+    UsersListComponent, 
+    UserFormDialogComponent
   ],
   imports: [
-    CommonModule,
     UserRoutingModule,
+    CommonModule,
     MatTableModule,
-    MatIconModule    
-  ]
+    MatIconModule,
+    MatDialogModule,
+    MatIconModule,
+    FormsModule,
+    MatListModule,
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatButtonModule
+  ],
+  exports: [],
 })
-export class UsersModule { }
+export class UsersModule {}

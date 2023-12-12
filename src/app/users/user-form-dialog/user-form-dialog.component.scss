@@ -1,0 +1,18 @@
+.container {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .content-container {
+        margin-top: 10px;
+        overflow: unset;
+    }
+
+    .actions-container{
+        float: right;
+        .btn-submit{
+            margin-right: 5px;
+        }
+    }
+}
