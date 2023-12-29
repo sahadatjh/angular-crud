@@ -1,18 +1,29 @@
 .container {
-    .header-container {
-        display: flex;
-        justify-content: space-between;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #999999;
+    .header-content h1{
+        font-size: 30px;
     }
+  }
 
-    .content-container {
-        margin-top: 10px;
-        overflow: unset;
+  .content-container {
+    margin-top: 10px;
+    mat-form-field {
+      width: 100%;
+      background-color: transparent !important;
     }
+  }
 
-    .actions-container{
-        float: right;
-        .btn-submit{
-            margin-right: 5px;
-        }
+  .actions-container {
+    float: right;
+    margin-bottom: 10px;
+    .btn-submit {
+      margin-right: 5px;
     }
+  }
+}
+.border-double{
+    border-top: 1px solid #999999;
 }

@@ -1,53 +1,61 @@
 <div class="container">
-    <div class="header-container">
-        <div class="header-content">
-            <h1 mat-dialog-title>{{data?.title}}</h1>
-        </div>
-        <div class="close-btn">
-            <button mat-icon-button (click)="onNoClick()">
-                <mat-icon>cancel</mat-icon>
-            </button>
-        </div>
+  <div class="header-container">
+    <div class="header-content">
+      <h1 mat-dialog-title>{{ data?.title }}</h1>
     </div>
-    <div mat-dialog-content class="content-container">
-        <div>
-            <form autocomplete="nope" autocorrect="nope" autocapitalize="nope"  id="user-form" [formGroup]="userForm" (submit)="onSubmit()">
-                <mat-list role="list">
-                  <mat-list-item class="user-property" role="listitem">
-                    <mat-form-field>
-                      <mat-label>First Name</mat-label>
-                      <label>
-                        <input formControlName="firstName" matInput>
-                      </label>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <mat-label>Last Name</mat-label>
-                      <label>
-                        <input formControlName="lastName" matInput>
-                      </label>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <mat-label>Email</mat-label>
-                      <label>
-                        <input formControlName="email" matInput>
-                      </label>
-                    </mat-form-field>
-                    <mat-form-field>
-                      <mat-label>Username</mat-label>
-                      <label>
-                        <input formControlName="username" matInput>
-                      </label>
-                    </mat-form-field>
-                  </mat-list-item>
-                 
-                
-                 
-                </mat-list>
-              </form>
-        </div>
+    <div class="close-btn">
+      <button mat-icon-button (click)="onNoClick()">
+        <mat-icon>cancel</mat-icon>
+      </button>
     </div>
-    <div mat-dialog-actions class="actions-container">
-        <button mat-raised-button color="primary" class="btn-submit">Submit</button>
-        <button mat-raised-button (click)="onNoClick()">Cancel</button>
+  </div>
+  <div mat-dialog-content class="content-container">
+    <div>
+      <form
+        autocomplete="nope"
+        autocorrect="nope"
+        autocapitalize="nope"
+        id="user-form"
+        [formGroup]="userForm"
+        (submit)="onSubmit()"
+      >
+        <mat-form-field >
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            placeholder="First Name"
+            formControlName="firstName"
+          />
+        </mat-form-field>
+        <mat-form-field >
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            placeholder="Last Name"
+            formControlName="lastName"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            placeholder="Username"
+            formControlName="username"
+          />
+        </mat-form-field>
+      </form>
     </div>
+  </div>
+  <div class="border-double"></div>
+  <div mat-dialog-actions class="actions-container">
+    <button
+      mat-raised-button
+      color="accent"
+      class="btn-submit"
+      (click)="onSubmit()"
+    >
+      Submit
+    </button>
+    <button mat-raised-button (click)="onNoClick()">Cancel</button>
+  </div>
 </div>
